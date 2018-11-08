@@ -1,10 +1,4 @@
-const defaultAwesomeFunction = (name) => {
-  const returnStr = `I am the Default Awesome Function, fellow comrade! - ${name}`;
-  return returnStr;
-};
+import MediaQuery from "./MediaQuery/MediaQuery.js";
+import withMedia from "./HoC/withMedia.jsx";
 
-const awesomeFunction = () => 'I am just an Awesome Function';
-
-export default defaultAwesomeFunction;
-
-export { awesomeFunction };
+export { MediaQuery, withMedia };

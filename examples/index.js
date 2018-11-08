@@ -1,5 +1,5 @@
-const example = require('./example');
+import example from './example.jsx';
 
-module.exports = {
+export {
   example
 };
