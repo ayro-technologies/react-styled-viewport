@@ -1,5 +1,5 @@
 {
-  "name": "react-media-helper",
+  "name": "@ayro-technologies/react-styled-viewport",
   "version": "1.0.0",
   "description": "React HoC and Styled-Components helper for handling media queries",
   "main": "./lib/index.js",
@@ -8,12 +8,12 @@
     "clean": "rimraf lib",
     "test": "npm run lint && npm run cover",
     "test:prod": "cross-env BABEL_ENV=production npm run test",
-    "test:only": "mocha --require babel-core/register --require babel-polyfill --recursive",
+    "test:only": "mocha --require babel-core/register --require @babel/polyfill --recursive",
     "test:watch": "npm test -- --watch",
     "test:examples": "node examples/",
-    "cover": "istanbul cover _mocha -- --require babel-core/register --require babel-polyfill --recursive",
+    "cover": "istanbul cover _mocha -- --require babel-core/register --require @babel/polyfill --recursive",
     "lint": "eslint src test",
-    "build": "cross-env BABEL_ENV=production babel src --out-dir lib"
+    "build": "rimraf lib && cross-env BABEL_ENV=production babel src --out-dir lib"
   },
   "files": [
     "lib",
@@ -21,14 +21,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cristian-eriomenco/react-media-helper.git"
+    "url": "git+https://github.com/cristian-eriomenco/react-viewport.git"
   },
   "keywords": [
-    "boilerplate",
-    "npm",
-    "module",
-    "node",
-    "javascript"
+    "react media query",
+    "react media styled components",
+    "react viewport",
   ],
   "author": "Cristian Eriomenco",
   "license": "MIT",
@@ -37,36 +35,34 @@
   },
   "homepage": "https://github.com/cristian-eriomenco/react-media-helper#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-info": "^4.0.4",
     "@storybook/addon-viewport": "^4.0.4",
     "@storybook/react": "^4.0.4",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-styled-components": "^1.8.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-minify": "^0.3.0",
-    "chai": "^4.1.2",
-    "cross-env": "^5.1.3",
-    "eslint": "^4.16.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
+    "babel-preset-minify": "^0.5.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "istanbul": "^1.0.0-alpha",
-    "mocha": "^5.0.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
+    "mocha": "^5.2.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "styled-components": "^4.0.3"
+    "styled-components": "^4.0.3",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1"
   }
 }

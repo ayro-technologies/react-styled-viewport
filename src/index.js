@@ -1,4 +1,4 @@
-import MediaQuery from "./MediaQuery/MediaQuery.js";
-import withMedia from "./HoC/withMedia.jsx";
+import viewport from "./Viewport/viewport";
+import withViewport from "./Viewport/withViewport.jsx";
 
-export { MediaQuery, withMedia };
+export { viewport, withViewport };

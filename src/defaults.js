@@ -5,7 +5,7 @@ export const ranges = {
 };
 
 export const sizes = {
-  mobile: 479, // Up-to 479
+  mobile: 479,
   tablet: 767,
   desktop: 991,
   largeDesktop: 1300

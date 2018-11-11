@@ -10,7 +10,15 @@ Happy hacking =)
 
 # Features
 
-* **ES6/ESNext** - Write _ES6_ code and _Babel_ will transpile it to ES5 for backwards compatibility
+* **Define own breakpoints** - Create breakpoints as: 
+```
+const breakpoints = {
+    mobile: 450,
+    tablet: 768,
+    desktop: 1020,
+    largeDesktop: 1600
+}
+```
 * **Test** - _Mocha_ with _Istanbul_ coverage
 * **Lint** - Preconfigured _ESlint_ with _Airbnb_ config
 * **CI** - _TravisCI_ configuration setup

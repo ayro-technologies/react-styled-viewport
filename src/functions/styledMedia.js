@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { ranges } from "../MediaQuery/MediaQuery.defaults";
+import { ranges } from "../defaults";
 
 export default sizes => {
   const keys = Object.keys(sizes);

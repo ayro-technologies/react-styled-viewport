@@ -1,14 +1,21 @@
 {
   "env": {
     "development": {
-      "presets": ["@babel/preset-env","@babel/preset-react"],
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
       "plugins": [
         "@babel/plugin-transform-react-jsx",
         "babel-plugin-styled-components"
       ]
     },
     "production": {
-      "presets": ["@babel/preset-env","@babel/preset-react"],
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "babel-preset-minify"
+      ],
       "plugins": [
         "@babel/plugin-transform-react-jsx",
         "babel-plugin-styled-components"

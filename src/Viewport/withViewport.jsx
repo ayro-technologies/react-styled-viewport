@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import * as defaults from "../MediaQuery/MediaQuery.defaults";
-import MediaQuery from '../MediaQuery/MediaQuery';
 
-export default (WrappedComponent, sizes = defaults.sizes) => {
+import viewport from './viewport';
+
+export default (WrappedComponent, sizes) => {
   return class MediaComponent extends Component {
     constructor(props) {
       super(props);
@@ -10,14 +10,14 @@ export default (WrappedComponent, sizes = defaults.sizes) => {
       this.state = {
         width: window.outerWidth
       };
-
-      this.mediaQuery = new MediaQuery(sizes);
+      
+      this.viewport = viewport(sizes);
     }
 
     componentDidMount() {
       window.addEventListener("resize", () => {
-        const newRange = this.mediaQuery.matchDevice(window.outerWidth);
-        const prevRange = this.mediaQuery.matchDevice(this.state.width);
+        const newRange = viewport.match(window.outerWidth);
+        const prevRange = viewport.match(this.state.width);
 
         if (newRange != prevRange) {
           this.setState({
@@ -31,7 +31,7 @@ export default (WrappedComponent, sizes = defaults.sizes) => {
       return (
         <WrappedComponent
           {...this.props}
-          viewport={this.mediaQuery.viewport()}
+          viewport={this.viewport}
         />
       );
     }
