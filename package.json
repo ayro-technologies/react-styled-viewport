@@ -1,6 +1,6 @@
 {
   "name": "@ayro-technologies/react-styled-viewport",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React HoC and Styled-Components helper for handling media queries",
   "main": "./lib/index.js",
   "scripts": {
