@@ -104,6 +104,7 @@ const breakpoints = {
 - [ ] Add Travis CI
 - [ ] Document APIs
 - [ ] Add more examples to storybook
+- [ ] Refine linting rules
 
 # License
 
