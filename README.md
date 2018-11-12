@@ -99,6 +99,12 @@ const breakpoints = {
 - `npm run storybook` - Starts storybook.
 
 
+# TODOS
+- [ ] Add Unit Tests
+- [ ] Add Travis CI
+- [ ] Document APIs
+- [ ] Add more examples to storybook
+
 # License
 
 MIT © Cristian Eriomenco
