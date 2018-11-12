@@ -1,6 +1,6 @@
 {
   "name": "@ayro-technologies/react-styled-viewport",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "React HoC and Styled-Components helper for handling media queries",
   "main": "./lib/index.js",
   "scripts": {
@@ -8,11 +8,10 @@
     "clean": "rimraf lib",
     "test": "npm run lint && npm run cover",
     "test:prod": "cross-env BABEL_ENV=production npm run test",
-    "test:only": "mocha --require babel-core/register --require @babel/polyfill --recursive",
+    "test:only": "mocha --require @babel/register --require @babel/polyfill --recursive",
     "test:watch": "npm test -- --watch",
-    "test:examples": "node examples/",
-    "cover": "istanbul cover _mocha -- --require babel-core/register --require @babel/polyfill --recursive",
-    "lint": "eslint src test",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --require @babel/register --require @babel/polyfill --recursive",
+    "lint": "eslint src",
     "build": "rimraf lib && cross-env BABEL_ENV=production babel src --out-dir lib"
   },
   "files": [
@@ -31,9 +30,9 @@
   "author": "Cristian Eriomenco",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cristian-eriomenco/react-media-helper/issues"
+    "url": "https://github.com/ayro-technologies/react-styled-viewport/issues"
   },
-  "homepage": "https://github.com/cristian-eriomenco/react-media-helper#readme",
+  "homepage": "https://github.com/ayro-technologies/react-styled-viewport#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
@@ -41,6 +40,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "@storybook/addon-info": "^4.0.4",
     "@storybook/addon-viewport": "^4.0.4",
     "@storybook/react": "^4.0.4",
