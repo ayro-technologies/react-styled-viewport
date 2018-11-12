@@ -16,7 +16,7 @@ Happy hacking =)
     * Via Higher Order Component's props:
 * **End to End Example**:
 
-```
+```javascript
 import React, { Component } from 'react';
 import { withViewport, viewport } from '@ayro-technologies/react-styled-viewport';
 
@@ -73,14 +73,17 @@ export default withViewport(Example, breakpoints);
 # Installation
 
 1. Install the package:
-```npm i @ayro-technologies/react-styled-viewport --save```
+```javascript
+npm i @ayro-technologies/react-styled-viewport --save
+```
 
 2. Import the dependencies:
-```import { withViewport, viewport } from '@ayro-technologies/react-styled-viewport';```
+```javascript
+import { withViewport, viewport } from '@ayro-technologies/react-styled-viewport';
+```
 
 3. Define your breakpoints:
-
-```
+```javascript
 const breakpoints = {
     mobile: 450,
     tablet: 768,
