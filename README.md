@@ -99,7 +99,7 @@ const breakpoints = {
 - `npm run storybook` - Starts storybook.
 
 
-# TODOS
+# TODOs:
 - [ ] Add Unit Tests
 - [ ] Add Travis CI
 - [ ] Document APIs
