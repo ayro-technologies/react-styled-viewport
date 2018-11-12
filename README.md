@@ -76,8 +76,14 @@ const breakpoints = {
 };
 ```
 4. Use it for your Styled Components via the helper or via HoC (passing in custom breakpoints):
-    * Styled Components helper: `const media = viewport(breakpoints).styled();`
-    * HoC: `export default withViewport(YourComponent, breakpoints);`
+    * Styled Components helper: 
+    ```javascript
+    const media = viewport(breakpoints).styled();
+    ```
+    * HoC: 
+    ```javascript
+    export default withViewport(YourComponent, breakpoints);
+    ```
 
 # Commands
 - `npm run clean` - Remove `lib/` directory
