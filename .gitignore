@@ -40,5 +40,8 @@ lib
 package-lock.json
 yarn.lock
 
+# cache
+.cache
+
 others
 .DS_Store
