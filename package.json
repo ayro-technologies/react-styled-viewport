@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cristian-eriomenco/react-viewport.git"
+    "url": "git+https://github.com/ayro-technologies/react-styled-viewport.git"
   },
   "keywords": [
     "react media query",
