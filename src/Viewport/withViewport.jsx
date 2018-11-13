@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import viewport from './viewport';
+import viewport from './viewport.js';
 
 export default (WrappedComponent, sizes) => {
   return class MediaComponent extends Component {

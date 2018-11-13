@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { ranges } from "../defaults";
+import { ranges } from "../defaults.js";
 
 export default sizes => {
   const keys = Object.keys(sizes);

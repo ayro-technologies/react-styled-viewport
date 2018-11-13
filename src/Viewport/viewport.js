@@ -1,11 +1,11 @@
-import styledMedia from "../functions/styledMedia";
-import * as defaults from "../defaults";
+import styledMedia from "../functions/styledMedia.js";
+import * as defaults from "../defaults.js";
 
 export default (customSizes = defaults.sizes) => {
 
   const sizes = { ...customSizes, ...defaults.ranges };
   const sortedSizes = Object.entries(sizes).sort((a, b) => (sizes[a] - sizes[b]));
-
+  
   return ({
     isMobile: () => {
       return window.outerWidth <= sizes.mobile;
@@ -37,7 +37,7 @@ export default (customSizes = defaults.sizes) => {
     },
     match: (currentSize) => {
       for (var [key, value] of sortedSizes) {
-        if (currentSize < value) {
+        if (currentSize <= value) {
           return key;
         }
       }
