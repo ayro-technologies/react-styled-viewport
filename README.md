@@ -99,7 +99,7 @@ const breakpoints = {
 
 # TODOs:
 - [ ] Add Unit Tests
-- [ ] Add Travis CI
+- [X] Add Travis CI
 - [ ] Document APIs
 - [ ] Add more examples to storybook
 - [ ] Refine linting rules
