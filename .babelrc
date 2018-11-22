@@ -8,6 +8,7 @@
       "plugins": [
         "@babel/plugin-transform-react-jsx",
         "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-proposal-class-properties",
         "babel-plugin-styled-components"
       ]
     },
@@ -20,6 +21,7 @@
       "plugins": [
         "@babel/plugin-transform-react-jsx",
         "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-proposal-class-properties",
         "babel-plugin-styled-components"
       ]
     }
