@@ -15,16 +15,22 @@ export default (WrappedComponent, sizes) => {
     }
 
     componentDidMount() {
-      window.addEventListener("resize", () => {
-        const newRange = viewport.match(window.outerWidth);
-        const prevRange = viewport.match(this.state.width);
+      this.listener = window.addEventListener("resize", this.onResize);
+    }
+
+    componentWillMount(){
+      window.removeEventListener("resize", this.onResize);
+    }
+
+    onResize = () => {
+        const newRange = this.viewport.match(window.outerWidth);
+        const prevRange = this.viewport.match(this.state.width);
 
         if (newRange != prevRange) {
           this.setState({
             width: window.outerWidth
           });
         }
-      });
     }
 
     render() {
