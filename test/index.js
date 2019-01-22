@@ -20,7 +20,7 @@ describe('Imports test', () => {
 
     for(var [key, value] of Object.entries(breakpoints)){
       global.window = {
-        outerWidth: value
+        innerWidth: value
       };
       assert(viewport(breakpoints).match(value) === key);
     }

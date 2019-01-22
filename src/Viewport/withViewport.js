@@ -8,7 +8,7 @@ export default (WrappedComponent, sizes) => {
       super(props);
 
       this.state = {
-        width: window.outerWidth
+        width: window.innerWidth
       };
       
       this.viewport = viewport(sizes);
@@ -23,12 +23,12 @@ export default (WrappedComponent, sizes) => {
     }
 
     onResize = () => {
-        const newRange = this.viewport.match(window.outerWidth);
+        const newRange = this.viewport.match(window.innerWidth);
         const prevRange = this.viewport.match(this.state.width);
 
         if (newRange != prevRange) {
           this.setState({
-            width: window.outerWidth
+            width: window.innerWidth
           });
         }
     }
