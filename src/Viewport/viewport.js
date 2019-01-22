@@ -8,32 +8,32 @@ export default (customSizes = defaults.sizes) => {
   
   return ({
     isMobile: () => {
-      return window.outerWidth <= sizes.mobile;
+      return window.innerWidth <= sizes.mobile;
     },
     isTablet: () => {
       return (
-        window.outerWidth > sizes.mobile && window.outerWidth <= sizes.tablet
+        window.innerWidth > sizes.mobile && window.innerWidth <= sizes.tablet
       );
     },
     isDesktop: () => {
       return (
-        window.outerWidth > sizes.tablet && window.outerWidth <= sizes.desktop
+        window.innerWidth > sizes.tablet && window.innerWidth <= sizes.desktop
       );
     },
     isLargeDesktop: () => {
-      return window.outerWidth > sizes.desktop;
+      return window.innerWidth > sizes.desktop;
     },
     equals: size => {
-      return window.outerWidth === size;
+      return window.innerWidth === size;
     },
     lessThan: size => {
-      return window.outerWidth < size;
+      return window.innerWidth < size;
     },
     higherThan: size => {
-      return window.outerWidth > size;
+      return window.innerWidth > size;
     },
     between: (min, max) => {
-      return min < window.outerWidth < max;
+      return min < window.innerWidth < max;
     },
     match: (currentSize) => {
       for (var [key, value] of sortedSizes) {
