@@ -18,7 +18,7 @@ export default (WrappedComponent, sizes) => {
       this.listener = window.addEventListener("resize", this.onResize);
     }
 
-    componentWillMount(){
+    componentWillUnmount(){
       window.removeEventListener("resize", this.onResize);
     }
 
